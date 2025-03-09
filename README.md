@@ -132,6 +132,49 @@ python gif_maker.py ./이미지폴더 output.gif -l 1  # 가상 환경 사용 �
 python batch_gif_maker.py test_images -d 200 -r 800x600  # 가상 환경 사용 시
 ```
 
+## Git 저장소 설정 및 사용
+
+프로젝트를 Git으로 관리하려면 다음 단계를 따르세요:
+
+### 1. Git 저장소 설정
+
+제공된 스크립트를 사용하여 Git 저장소를 설정할 수 있습니다:
+
+```bash
+chmod +x setup_git.sh
+./setup_git.sh
+```
+
+이 스크립트는 다음 작업을 수행합니다:
+- Git 저장소 초기화
+- 적절한 `.gitignore` 파일 생성
+- Git 사용자 정보 설정 및 커밋 방법 안내
+
+### 2. 수동으로 Git 설정하기
+
+1. Git 저장소 초기화:
+```bash
+git init
+```
+
+2. Git 사용자 정보 설정:
+```bash
+git config --global user.name "사용자 이름"
+git config --global user.email "이메일 주소"
+```
+
+3. 파일 추가 및 커밋:
+```bash
+git add .
+git commit -m "초기 커밋: GIF 메이커 프로그램 추가"
+```
+
+4. 원격 저장소 연결 (GitHub 등):
+```bash
+git remote add origin <원격 저장소 URL>
+git push -u origin main
+```
+
 ## 주의사항
 
 - 입력 디렉토리에는 JPEG 이미지 파일(.jpg, .jpeg)만 처리됩니다.
